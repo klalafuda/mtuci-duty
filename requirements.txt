@@ -1,0 +1,6 @@
+fastapi
+sqlmodel
+alembic
+minio
+psycopg2
+python-dotenv
