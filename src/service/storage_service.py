@@ -20,7 +20,6 @@ if not client.bucket_exists(bucket_name):
 
 def upload_file(file_data: BytesIO, content_type: str) -> str:
     file_name = f"{uuid.uuid4()}.jpg"
-    print("PENIS PENIS PENISPENISPENISPENISPENISPENIS ")  # TODO: DELETE
     client.put_object(
         bucket_name=minio_config.MINIO_BUCKET,
         object_name=file_name,
@@ -28,7 +27,5 @@ def upload_file(file_data: BytesIO, content_type: str) -> str:
         length=len(file_data.getvalue()),
         content_type=content_type,
     )
-    print("HUI HUI HUI HUI HUI HUIHUI HUI HUIHUI HUI HUIHUI")  # TODO: DELETE
-
     url = client.get_presigned_url("GET", minio_config.MINIO_BUCKET, file_name)
     return url

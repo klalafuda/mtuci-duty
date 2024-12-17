@@ -7,7 +7,6 @@ floors = {2: range(13, 51), 3: range(51, 89), 4: range(89, 127), 5: range(127, 1
 
 def fill_rooms():
     with Session(engine) as session:
-        # Проверяем, не заполнена ли уже таблица
         count = len(session.exec(select(Room)).fetchall())
         if count > 0:
             print("Таблица Room уже заполнена.")

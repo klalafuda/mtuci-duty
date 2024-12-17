@@ -4,3 +4,4 @@ alembic
 minio
 psycopg2
 python-dotenv
+pydantic-settings

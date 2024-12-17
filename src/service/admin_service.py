@@ -1,7 +1,6 @@
 from io import BytesIO
 
 from sqlmodel import Session, select
-from typing import Optional
 from src.database.models import DutyDay, DutyRoom, Room
 from src.api.models import DutyDayCreate, DutyDayRead, DutyDayReportUpdate
 from src.service.storage_service import upload_file

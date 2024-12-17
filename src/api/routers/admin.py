@@ -1,6 +1,5 @@
-# src/api/routers/admin.py
 from fastapi import APIRouter, Depends, HTTPException, UploadFile, File, Form
-from typing import List, Optional
+from typing import List
 from sqlmodel import Session
 from src.database.database import get_session
 from src.api.models import DutyDayCreate
@@ -78,7 +77,6 @@ def admin_delete_duty_day_api(
     return
 
 
-# Новый эндпоинт для обновления отчёта
 @router.post("/duty_days/{duty_day_id}/report")
 async def admin_set_duty_report_api(
     duty_day_id: int,

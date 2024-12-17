@@ -1,4 +1,3 @@
-# src/service/user_service.py
 from datetime import date
 from typing import List
 from sqlmodel import Session, select
